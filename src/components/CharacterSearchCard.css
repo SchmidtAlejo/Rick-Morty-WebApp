@@ -1,0 +1,16 @@
+.container-search-card{
+    display: flex;
+    margin: 5px;
+}
+
+.image{
+   border-radius: 20px;
+   width: 60px;
+   height: 60px;
+}
+
+.character-name{
+    margin-left: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+}

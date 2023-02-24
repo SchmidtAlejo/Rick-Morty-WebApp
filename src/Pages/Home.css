@@ -1,0 +1,18 @@
+.pages-buttons{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.home-container{
+    position: relative;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+
+.filter{
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 0;
+}

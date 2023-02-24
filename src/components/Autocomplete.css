@@ -1,0 +1,16 @@
+.search-character{
+    border-radius: 10px;
+    height: 40px;
+    width: 300px;
+    padding-left: 15px;
+}
+
+.autocomplete{
+    position: absolute;
+    z-index:1;
+    width: 300px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    max-height: 500px;
+	overflow: auto;
+}

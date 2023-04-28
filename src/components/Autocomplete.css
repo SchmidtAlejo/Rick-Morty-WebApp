@@ -1,16 +1,40 @@
-.search-character{
+@media (min-width: 600px) {
+  .search-character {
     border-radius: 10px;
     height: 40px;
-    width: 300px;
     padding-left: 15px;
+    width: 300px;
+  }
 }
 
-.autocomplete{
+@media (max-width: 600px) {
+  .search-character {
+    border-radius: 10px;
+    height: 40px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 600px) {
+  .autocomplete {
     position: absolute;
-    z-index:1;
+    z-index: 1;
     width: 300px;
     border-radius: 5px;
     background-color: whitesmoke;
     max-height: 500px;
-	overflow: auto;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 600px) {
+    .autocomplete {
+      position: absolute;
+      z-index: 1;
+      border-radius: 5px;
+      background-color: whitesmoke;
+      max-height: 500px;
+      overflow: auto;
+      margin-right: 0.75rem;
+    }
 }

@@ -3,6 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { getCharactersByName } from "../services/RickAndMortyAPI";
 import Autocomplete from "./Autocomplete.js";
+import "./Navigation.css";
 
 export default function Navigation() {
   const [characters, setCharacters] = useState("");
@@ -19,7 +20,7 @@ export default function Navigation() {
   return (
     <div>
       <Navbar bg="dark" variant="dark">
-        <Container style={{ marginLeft: "60px" }}>
+        <Container style={{marginRight: 'auto'}}>
           <NavLink className="navbar-brand" to={"/"}>
             Home
           </NavLink>
@@ -28,13 +29,13 @@ export default function Navigation() {
               Favorites
             </NavLink>
           </Nav>
-          <Autocomplete
-            list={characters}
-            onChange={onChange}
-            emptySearch={() => {
-              setCharacters([]);
-            }}
-          />
+            <Autocomplete
+              list={characters}
+              onChange={onChange}
+              emptySearch={() => {
+                setCharacters([]);
+              }}
+            />
         </Container>
       </Navbar>
       <Outlet />

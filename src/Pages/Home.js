@@ -33,11 +33,11 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      <div className="filter">
-        <DropdownFilter filterName={filterName} updateFilter={updateFilter}/>
-      </div>
       <div className="pages-buttons">
         <PageSelector page={page} updatePage={updatePage} maxPage={maxPage}/>
+      </div>
+      <div className="filter">
+        <DropdownFilter filterName={filterName} updateFilter={updateFilter}/>
       </div>
       <CharacterList key={"home"} characters={characters} />
       <div className="pages-buttons">

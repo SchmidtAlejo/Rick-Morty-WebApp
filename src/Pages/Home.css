@@ -1,18 +1,30 @@
-.pages-buttons{
-    margin: 20px;
-    display: flex;
-    justify-content: center;
+.pages-buttons {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.home-container{
+@media (min-width: 600px) {
+  .home-container {
     position: relative;
-    margin-left: 125px;
-    margin-right: 125px;
-}
-
-.filter{
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+.filter {
     position: absolute;
     display: flex;
-    right: 0;
+    left: 10px;
     top: 0;
+  }
 }
+
+@media (max-width: 600px) {
+  .home-container {
+    position: relative;
+  }
+  .filter {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+

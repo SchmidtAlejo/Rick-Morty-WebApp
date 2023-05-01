@@ -11,14 +11,16 @@ export default function Character() {
   return (
     <div className="container-character">
       <div className="top-container">
-        <div>
+        <div className="image-container">
           <img src={character.image} />
         </div>
         <div className="name">
           <h1>{character.name}</h1>
           <p>{character.status}</p>
         </div>
-        <FavoriteButton characterId={character.id} />
+        <div className="favorite">
+          <FavoriteButton characterId={character.id} />
+        </div>
       </div>
       <div className="low-container">
         <div className="low left">

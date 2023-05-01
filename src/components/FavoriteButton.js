@@ -33,13 +33,13 @@ export default function FavoriteButton({ characterId }) {
   if (isFavorite) {
     return (
       <Button className={"icon"} onClick={removeFavorite} >
-        <BsStarFill color="White" size={"100px"}/>
+        <BsStarFill color="White" size={"50px"}/>
       </Button>
     );
   } else {
     return (
       <Button className={"icon"} onClick={addFavorite} >
-        <BsStar color="White" size={"100px"}/>
+        <BsStar color="White" size={"50px"}/>
       </Button>
     );
   }

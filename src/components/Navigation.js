@@ -20,7 +20,7 @@ export default function Navigation() {
   return (
     <div>
       <Navbar bg="dark" variant="dark">
-        <Container style={{marginRight: 'auto'}}>
+        <Container className="container">
           <NavLink className="navbar-brand" to={"/"}>
             Home
           </NavLink>

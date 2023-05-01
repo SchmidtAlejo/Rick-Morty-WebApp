@@ -4,7 +4,7 @@
   justify-content: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .home-container {
     position: relative;
     margin-left: 100px;
@@ -18,7 +18,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .home-container {
     position: relative;
   }

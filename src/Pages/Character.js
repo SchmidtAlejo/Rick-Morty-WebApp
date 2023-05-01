@@ -14,12 +14,14 @@ export default function Character() {
         <div className="image-container">
           <img src={character.image} />
         </div>
-        <div className="name">
-          <h1>{character.name}</h1>
-          <p>{character.status}</p>
-        </div>
-        <div className="favorite">
-          <FavoriteButton characterId={character.id} />
+        <div className="top-right">
+          <div className="name">
+            <h1>{character.name}</h1>
+            <p>{character.status}</p>
+          </div>
+          <div className="favorite">
+            <FavoriteButton characterId={character.id} />
+          </div>
         </div>
       </div>
       <div className="low-container">

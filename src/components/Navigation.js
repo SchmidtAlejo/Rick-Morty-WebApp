@@ -5,6 +5,7 @@ import { getCharactersByName } from "../services/RickAndMortyAPI";
 import Autocomplete from "./Autocomplete.js";
 import "./Navigation.css";
 import { FaBars } from "react-icons/fa";
+import Footer from "./Footer";
 
 export default function Navigation() {
   const [characters, setCharacters] = useState("");
@@ -20,58 +21,58 @@ export default function Navigation() {
     }
   };
 
-  useEffect(()=>{
-    if(onToggle){
+  useEffect(() => {
+    if (onToggle) {
       setTimeout(() => {
-        setOutlet(false)
+        setOutlet(false);
       }, 150);
+    } else {
+      setOutlet(true);
     }
-    else{
-      setOutlet(true)
-    }
-  }, [onToggle])
+  }, [onToggle]);
 
   const returnToggleClass = () => {
-    if(onToggle){
-      return "me-auto nav-menu nav-menu_visible"
-    }
-    else{
+    if (onToggle) {
+      return "me-auto nav-menu nav-menu_visible";
+    } else {
       return "me-auto nav-menu";
     }
-  }
+  };
 
-  const renderOutlet= () =>{
-
-    if(outlet){
-      return (
-        <Outlet />
-      )
+  const renderOutlet = () => {
+    if (outlet) {
+      return <Outlet />;
     }
-  }
+  };
 
   return (
-    <div>
+    <div className="content">
       <Navbar bg="dark" variant="dark">
         <Container className="container">
           <div className="nav-toggle">
-            <div className="bars" onClick={()=>{setOnToggle(!onToggle)}}>
-              <FaBars color="White" size={"20px"}/>
+            <div
+              className="bars"
+              onClick={() => {
+                setOnToggle(!onToggle);
+              }}
+            >
+              <FaBars color="White" size={"20px"} />
             </div>
-            <NavLink className="navbar-brand" to={"/"}>
-              Home
-            </NavLink>
           </div>
-        <Nav className={ returnToggleClass()}>
-          <NavLink className="nav-link" to="/favorites">
-            Favorites
-          </NavLink>
-          <NavLink className="nav-link" to="/favorites">
-            Favorites
-          </NavLink>
-          <NavLink className="nav-link" to="/favorites">
-            Favorites
-          </NavLink>
-        </Nav>
+          <Nav className={returnToggleClass()}>
+            <NavLink className="navbar-brand" to={"/"}>
+              Rick And Morty
+            </NavLink>
+            <NavLink className="nav-link" to="/favorites">
+              Favorites
+            </NavLink>
+            <NavLink className="nav-link" to="/episode/">
+              Episodes
+            </NavLink>
+            <NavLink className="nav-link" to="/location/">
+              Locations
+            </NavLink>
+          </Nav>
           <Autocomplete
             list={characters}
             onChange={onChange}
@@ -81,9 +82,8 @@ export default function Navigation() {
           />
         </Container>
       </Navbar>
-      {
-        renderOutlet()
-      }
+      {renderOutlet()}
+      <Footer />
     </div>
   );
 }

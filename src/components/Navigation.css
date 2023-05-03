@@ -2,7 +2,7 @@
   .container {
     margin-left: 100px;
   }
-  .bars{
+  .bars {
     display: none;
   }
 }
@@ -10,6 +10,14 @@
 @media (max-width: 768px) {
   .container {
     margin-left: 0px;
+  }
+  .navbar-brand {
+    padding: 8px;
+    margin-left: 16px;
+  }
+  .nav-link {
+    padding: 8px;
+    margin-left: 16px;
   }
   .nav-menu {
     display: flex;
@@ -25,16 +33,23 @@
     overflow-y: auto;
   }
 
-  .nav-toggle{
+  .nav-toggle {
     display: flex;
+    cursor: pointer;
   }
-  .bars{
+  .bars {
     margin-top: auto;
     margin-bottom: auto;
     padding: 0px 5px;
   }
 
-  .nav-menu_visible{
+  .nav-menu_visible {
     right: 0;
   }
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

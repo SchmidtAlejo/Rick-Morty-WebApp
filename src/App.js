@@ -5,8 +5,9 @@ import {
 } from "react-router-dom";
 import Home from "./Pages/Home";
 import Favorites from "./Pages/Favorites";
+import Episode from "./Pages/Episode";
+import Location from "./Pages/Location";
 import Navigation from "./components/Navigation";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Character, { LoaderCharacter } from "./Pages/Character";
 import Error from './Pages/Error'
 
@@ -28,6 +29,14 @@ const router = createBrowserRouter([
         path: "character/:characterId",
         element: <Character />,
         loader: LoaderCharacter
+      },
+      {
+        path: "episode/",
+        element: <Episode />
+      },
+      {
+        path: "location/",
+        element: <Location />
       },
       {
         path:'*',

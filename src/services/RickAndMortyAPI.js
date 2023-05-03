@@ -34,7 +34,16 @@ export async function getCharacterById(characterId) {
   try {
     const url = `${API_HOST}/character/${characterId}`;
     const response = await fetch(url);
-    const result = await response.json(); 
+    const result = await response.json();
+    let numbers= '' ;
+    result.episode.forEach(
+      episode=>{
+        const array=episode.split('/')
+        numbers+= array[array.length-1]+','
+      }
+    );
+    const episodes= await getEpisodeById(numbers);
+    result.episode= episodes;
     return result;
   } catch (error) {
     console.log("Solicitud fallida", error);
@@ -54,3 +63,13 @@ export async function getFavoritesCharacters(list) {
   }
 }
 
+export async function getEpisodeById(episodeId) {
+  try {
+    const url = `${API_HOST}/episode/${episodeId}`;
+    const response = await fetch(url);
+    const result = await response.json();
+    return result;
+  } catch (error) {
+    console.log("Solicitud fallida", error);
+  }
+}

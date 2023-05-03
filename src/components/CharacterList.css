@@ -1,11 +1,15 @@
 @media (max-width: 768px) {
-    .row-container{
-        justify-content: center;
-    }
+  .row-container {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 768px) {
-    .row-container{
-        justify-content: space-between;
-    }
+  .row-container {
+    justify-content: space-between;
+  }
+}
+
+.col-container {
+  width: auto;
 }

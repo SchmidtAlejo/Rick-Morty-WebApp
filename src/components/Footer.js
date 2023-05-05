@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="footer-container">
       <img
-        className="logo-container"
+        className="logo-container-footer"
         src={require("./../assets/Rick_and_Morty.svg.png")}
       />
       <div className="social-media-container">

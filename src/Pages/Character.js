@@ -8,12 +8,12 @@ export default function Character() {
   const { character } = useLoaderData();
   const [seeMore, setSeeMore] = useState(false);
 
-  const onToggleSee = ()=>{
-    setSeeMore(!seeMore)
-  }
+  const onToggleSee = () => {
+    setSeeMore(!seeMore);
+  };
 
   const renderSeeMore = () => {
-    if (seeMore) {
+    if (character.episode.length < 6) {
       return (
         <div>
           {character.episode.map((episode) => (
@@ -21,7 +21,24 @@ export default function Character() {
               {`Episode ${episode.id}: ${episode.name}`}
             </p>
           ))}
-          <h4 className="episode-name see" onClick={()=>{onToggleSee()}}>Hide</h4>
+        </div>
+      );
+    } else if (seeMore) {
+      return (
+        <div>
+          {character.episode.map((episode) => (
+            <p className="episode-name">
+              {`Episode ${episode.id}: ${episode.name}`}
+            </p>
+          ))}
+          <h4
+            className="episode-name see"
+            onClick={() => {
+              onToggleSee();
+            }}
+          >
+            Hide
+          </h4>
         </div>
       );
     } else {
@@ -42,7 +59,14 @@ export default function Character() {
           <p className="episode-name">
             {`Episode ${character.episode[4].id}: ${character.episode[4].name}`}
           </p>
-          <h4 className="episode-name see" onClick={()=>{onToggleSee()}}>See more</h4>
+          <h4
+            className="episode-name see"
+            onClick={() => {
+              onToggleSee();
+            }}
+          >
+            See more
+          </h4>
         </div>
       );
     }

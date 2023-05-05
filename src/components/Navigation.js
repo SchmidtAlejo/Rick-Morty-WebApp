@@ -48,28 +48,34 @@ export default function Navigation() {
   return (
     <div className="content">
       <Navbar bg="dark" variant="dark">
-        <Container className="container">
-          <div className="nav-toggle">
-            <div
-              className="bars"
-              onClick={() => {
-                setOnToggle(!onToggle);
-              }}
-            >
-              <FaBars color="White" size={"20px"} />
+        <Container className="container-nav">
+          <div className="logo-container-header">
+            <div className="nav-toggle">
+              <div
+                className="bars"
+                onClick={() => {
+                  setOnToggle(!onToggle);
+                }}
+              >
+                <FaBars color="White" size={"20px"} />
+              </div>
             </div>
+            <NavLink className="navbar-brand" to={"/"}>
+              <img
+                src={require("./../assets/Rick_and_Morty.svg.png")}
+                className="img"
+                onClick={()=>{ setOnToggle(false)}}
+              />
+            </NavLink>
           </div>
           <Nav className={returnToggleClass()}>
-            <NavLink className="navbar-brand" to={"/"}>
-              Rick And Morty
-            </NavLink>
-            <NavLink className="nav-link" to="/favorites">
+            <NavLink className="nav-link" to="/favorites" onClick={()=>{ setOnToggle(false)}}>
               Favorites
             </NavLink>
-            <NavLink className="nav-link" to="/episode/">
+            <NavLink className="nav-link" to="/episode/" onClick={()=>{ setOnToggle(false)}}>
               Episodes
             </NavLink>
-            <NavLink className="nav-link" to="/location/">
+            <NavLink className="nav-link" to="/location/" onClick={()=>{ setOnToggle(false)}}>
               Locations
             </NavLink>
           </Nav>

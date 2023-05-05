@@ -12,6 +12,7 @@
     border-radius: 10px;
     height: 40px;
     padding-left: 15px;
+    width: 200px;
   }
 }
 
@@ -35,6 +36,6 @@
       background-color: whitesmoke;
       max-height: 400px;
       overflow: auto;
-      margin-right: 0.75rem;
+      width: 200px;
     }
 }

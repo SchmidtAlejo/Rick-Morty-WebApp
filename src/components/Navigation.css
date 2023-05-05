@@ -1,15 +1,25 @@
 @media (min-width: 768px) {
-  .container {
+  .container-nav {
     margin-left: 100px;
   }
   .bars {
     display: none;
   }
+  .img{
+    width: 120px;
+  }
 }
 
 @media (max-width: 768px) {
-  .container {
+  .container-nav {
     margin-left: 0px;
+  }
+  .logo-container-header{
+    display: flex;
+  }
+  .img{
+    width: 60px;
+    flex: 1;
   }
   .navbar-brand {
     padding: 8px;

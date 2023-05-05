@@ -1,5 +1,5 @@
 @media (min-width: 768px) {
-  .logo-container {
+  .logo-container-footer {
     height: 80px;
     margin: auto 20px auto 100px;
   }
@@ -21,7 +21,7 @@
     flex-direction: column;
     height: auto;
   }
-  .logo-container {
+  .logo-container-footer {
     width: 60%;
     margin: 20px auto;
   }

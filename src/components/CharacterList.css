@@ -1,12 +1,23 @@
+.grid-container {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  gap: 16px;
+  justify-content: space-between;
+}
+
 @media (max-width: 768px) {
-  .row-container {
-    justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, 300px);
   }
 }
 
-@media (min-width: 768px) {
-  .row-container {
-    justify-content: space-between;
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, 200px);
   }
 }
 

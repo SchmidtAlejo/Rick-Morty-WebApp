@@ -7,10 +7,11 @@
 .no-overflow {
   overflow: hidden;
 }
-
 @media (min-width: 768px) {
   .container-nav {
     margin-left: 100px;
+    max-width: 100% !important;
+    margin-right: 100px;
   }
   .bars {
     display: none;
@@ -108,4 +109,12 @@
   .nav-menu_visible {
     bottom: 0;
   }
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+  .container-nav {
+    max-width: 100% !important;
+    margin-right: 0px;
+  }
+  
 }

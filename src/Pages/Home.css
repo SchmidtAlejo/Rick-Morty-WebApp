@@ -4,23 +4,24 @@
   justify-content: center;
 }
 
+.home-container{
+  position: relative;
+}
+
 @media (min-width: 768px) {
   .home-container {
-    position: relative;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 0 100px;
   }
 .filter {
     position: absolute;
     display: flex;
-    left: 10px;
-    top: 20px;
+    top: 0px;
   }
 }
 
 @media (max-width: 768px) {
   .home-container {
-    position: relative;
+    margin: 0 20px;
   }
   .filter {
     margin-bottom: 10px;

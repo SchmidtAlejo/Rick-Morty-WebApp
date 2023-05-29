@@ -1,31 +1,28 @@
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
   .card-container {
     width: 18rem;
   }
-
 }
-
 @media (max-width: 992px) {
   .card-container {
     width: 12rem;
   }
-  .status{
+  .status {
     font-size: 25px;
   }
-  .name-character{    
+  .name-character {
     font-size: 0.8rem !important;
   }
 }
-
 @media (max-width: 768px) {
   .card-container {
     width: 9rem;
     font-size: 15px;
   }
-  .status{
+  .status {
     font-size: 20px;
   }
-  .name-character{    
+  .name-character {
     font-size: 8px !important;
   }
-}
+}*/

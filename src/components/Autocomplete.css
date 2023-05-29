@@ -1,41 +1,42 @@
+.autocomplete {
+  position: absolute;
+  z-index: 1;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  overflow: auto;
+}
+
+.search-character {
+  border-radius: 10px;
+  height: 40px;
+  padding-left: 15px;
+}
+.search-character {
+  width: 300px;
+}
+.autocomplete{
+  width: 300px;
+}
+
 @media (min-width: 768px) {
   .search-character {
-    border-radius: 10px;
-    height: 40px;
-    padding-left: 15px;
     width: 300px;
   }
-}
-
-@media (max-width: 768px) {
-  .search-character {
-    border-radius: 10px;
-    height: 40px;
-    padding-left: 15px;
-    width: 200px;
-  }
-}
-
-@media (min-width: 768px) {
   .autocomplete {
     position: absolute;
     z-index: 1;
     width: 300px;
-    border-radius: 5px;
-    background-color: whitesmoke;
     max-height: 500px;
-    overflow: auto;
   }
 }
 
 @media (max-width: 768px) {
-    .autocomplete {
-      position: absolute;
-      z-index: 1;
-      border-radius: 5px;
-      background-color: whitesmoke;
-      max-height: 400px;
-      overflow: auto;
-      width: 200px;
-    }
+  .search-character {
+    margin-top: 8px;
+    margin-left: 16px;
+  }
+  .autocomplete {
+    margin-left: 16px;
+    max-height: 400px;
+  }
 }

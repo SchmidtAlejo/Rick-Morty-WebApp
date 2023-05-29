@@ -10,7 +10,14 @@ import Footer from "./Footer";
 export default function Navigation() {
   const [characters, setCharacters] = useState("");
   const [onToggle, setOnToggle] = useState(false);
-  const [outlet, setOutlet] = useState(true);
+
+  useEffect(() => {
+    if (onToggle) {
+      document.body.classList.add("no-overflow");
+    } else {
+      document.body.classList.remove("no-overflow");
+    }
+  }, [onToggle]);
 
   const onChange = async (value) => {
     if (value !== "") {
@@ -21,27 +28,11 @@ export default function Navigation() {
     }
   };
 
-  useEffect(() => {
-    if (onToggle) {
-      setTimeout(() => {
-        setOutlet(false);
-      }, 150);
-    } else {
-      setOutlet(true);
-    }
-  }, [onToggle]);
-
   const returnToggleClass = () => {
     if (onToggle) {
       return "me-auto nav-menu nav-menu_visible";
     } else {
       return "me-auto nav-menu";
-    }
-  };
-
-  const renderOutlet = () => {
-    if (outlet) {
-      return <Outlet />;
     }
   };
 
@@ -64,31 +55,61 @@ export default function Navigation() {
               <img
                 src={require("./../assets/Rick_and_Morty.svg.png")}
                 className="img"
-                onClick={()=>{ setOnToggle(false)}}
+                onClick={() => {
+                  setOnToggle(false);
+                }}
               />
             </NavLink>
           </div>
-          <Nav className={returnToggleClass()}>
-            <NavLink className="nav-link" to="/favorites" onClick={()=>{ setOnToggle(false)}}>
-              Favorites
-            </NavLink>
-            <NavLink className="nav-link" to="/episode/" onClick={()=>{ setOnToggle(false)}}>
-              Episodes
-            </NavLink>
-            <NavLink className="nav-link" to="/location/" onClick={()=>{ setOnToggle(false)}}>
-              Locations
-            </NavLink>
-          </Nav>
-          <Autocomplete
-            list={characters}
-            onChange={onChange}
-            emptySearch={() => {
-              setCharacters([]);
-            }}
-          />
+          <div className={returnToggleClass()}>
+            <Nav className="nav-menu-list">
+              <NavLink
+                className="nav-link"
+                to="/favorites"
+                onClick={() => {
+                  setOnToggle(false);
+                }}
+              >
+                Favorites
+              </NavLink>
+              <NavLink
+                className="nav-link"
+                to="/episode/"
+                onClick={() => {
+                  setOnToggle(false);
+                }}
+              >
+                Episodes
+              </NavLink>
+              <NavLink
+                className="nav-link"
+                to="/location/"
+                onClick={() => {
+                  setOnToggle(false);
+                }}
+              >
+                Locations
+              </NavLink>
+            </Nav>
+            <div className="autocomplete-container">
+              <Autocomplete
+                list={characters}
+                onChange={onChange}
+                emptySearch={() => {
+                  setCharacters([]);
+                }}
+                onToggle={() => {
+                  setOnToggle(false);
+                }}
+              />
+            </div>
+            <div className="opacation"></div>
+          </div>
         </Container>
       </Navbar>
-      {renderOutlet()}
+      <div>
+        <Outlet />;
+      </div>
       <Footer />
     </div>
   );

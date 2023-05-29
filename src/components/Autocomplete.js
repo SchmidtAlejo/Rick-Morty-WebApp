@@ -3,7 +3,7 @@ import CharacterSearchCard from "./CharacterSearchCard";
 import "./Autocomplete.css";
 import { Link } from "react-router-dom";
 
-export default function Autocomplete({ list, onChange, emptySearch }) {
+export default function Autocomplete({ list, onChange, emptySearch, onToggle }) {
 
   const [input, setInput]= useState('')
 
@@ -14,7 +14,8 @@ export default function Autocomplete({ list, onChange, emptySearch }) {
 
   const onClick = () => {
     setInput('');
-    emptySearch()
+    emptySearch();
+    onToggle(); 
   };
 
   const renderList = () => {

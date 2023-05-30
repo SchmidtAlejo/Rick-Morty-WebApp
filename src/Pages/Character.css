@@ -12,45 +12,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .container-character {
-    margin: 0px 10px;
-    margin-top: 20px;
-  }
-  .image-container {
-    margin: 0 auto;
-  }
-  .name {
-    max-width: max-content;
-    margin-left: 10px !important;
-  }
-  .mid {
-    margin: 10px 0px !important;
-    min-width: 400px;
-  }
-  .low-container{
-    margin: 10px 0px !important;
-  }
-}
-
-@media (max-width: 576px) {
-  h1 {
-    font-size: 40px !important;
-  }
-
-  h4 {
-    font-size: 20px !important;
-  }
-
-  p {
-    font-size: 20px !important;
-    font-weight: 300;
-  }
-  .mid {
-    min-width: 300px;
-  }
-}
-
 .top-right {
   flex: 1;
   display: flex;
@@ -106,6 +67,14 @@
   background-color: rgba(220, 218, 218, 0.841);
   margin: 10px;
   padding: 20px;
+  min-width: 300px;
+}
+.episodes-container{
+  display: flex;
+  flex-direction: column;
+  transition: 1s;
+  overflow: auto;
+  max-height: 250px;
 }
 
 h1 {
@@ -129,4 +98,43 @@ img {
 .see{
   text-align: center;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container-character {
+    margin: 0px 10px;
+    margin-top: 20px;
+  }
+  .image-container {
+    margin: 0 auto;
+  }
+  .name {
+    max-width: max-content;
+    margin-left: 10px !important;
+  }
+  .mid {
+    margin: 10px 0px !important;
+    min-width: 400px;
+  }
+  .low-container{
+    margin: 10px 0px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 40px !important;
+  }
+
+  h4 {
+    font-size: 20px !important;
+  }
+
+  p {
+    font-size: 20px !important;
+    font-weight: 300;
+  }
+  .mid {
+    min-width: 300px;
+  }
 }

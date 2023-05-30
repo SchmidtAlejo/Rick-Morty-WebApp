@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { getCharacterById } from "../services/RickAndMortyAPI";
 import "./Character.css";
 import FavoriteButton from "../components/FavoriteButton";
@@ -6,71 +6,6 @@ import { useLoaderData } from "react-router-dom";
 
 export default function Character() {
   const { character } = useLoaderData();
-  const [seeMore, setSeeMore] = useState(false);
-
-  const onToggleSee = () => {
-    setSeeMore(!seeMore);
-  };
-
-  const renderSeeMore = () => {
-    if (character.episode.length < 6) {
-      return (
-        <div>
-          {character.episode.map((episode) => (
-            <p className="episode-name">
-              {`Episode ${episode.id}: ${episode.name}`}
-            </p>
-          ))}
-        </div>
-      );
-    } else if (seeMore) {
-      return (
-        <div>
-          {character.episode.map((episode) => (
-            <p className="episode-name">
-              {`Episode ${episode.id}: ${episode.name}`}
-            </p>
-          ))}
-          <h4
-            className="episode-name see"
-            onClick={() => {
-              onToggleSee();
-            }}
-          >
-            Hide
-          </h4>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <p className="episode-name">
-            {`Episode ${character.episode[0].id}: ${character.episode[0].name}`}
-          </p>
-          <p className="episode-name">
-            {`Episode ${character.episode[1].id}: ${character.episode[1].name}`}
-          </p>
-          <p className="episode-name">
-            {`Episode ${character.episode[3].id}: ${character.episode[3].name}`}
-          </p>
-          <p className="episode-name">
-            {`Episode ${character.episode[3].id}: ${character.episode[3].name}`}
-          </p>
-          <p className="episode-name">
-            {`Episode ${character.episode[4].id}: ${character.episode[4].name}`}
-          </p>
-          <h4
-            className="episode-name see"
-            onClick={() => {
-              onToggleSee();
-            }}
-          >
-            See more
-          </h4>
-        </div>
-      );
-    }
-  };
 
   return (
     <div className="container-character">
@@ -115,7 +50,13 @@ export default function Character() {
       </div>
       <div className="low-container">
         <h4>Episodes</h4>
-        {renderSeeMore()}
+        <div className="episodes-container">
+          {character.episode.map((episode) => (
+            <p className="episode-name" key={episode.id}>
+              {`Episode ${episode.id}: ${episode.name}`}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );

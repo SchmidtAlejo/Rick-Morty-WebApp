@@ -103,12 +103,17 @@ export default function Navigation() {
                 }}
               />
             </div>
-            <div className="opacation"></div>
+            <div
+              className="opacation"
+              onClick={() => {
+                setOnToggle(false);
+              }}
+            ></div>
           </div>
         </Container>
       </Navbar>
       <div>
-        <Outlet />;
+        <Outlet />
       </div>
       <Footer />
     </div>

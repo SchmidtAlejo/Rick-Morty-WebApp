@@ -78,6 +78,11 @@
 
   .autocomplete-container {
     background-color: #343a40;
+    position: relative;
+    z-index: 1;
+    position: relative;
+    z-index: 100;
+
   }
 
   .opacation {
@@ -94,6 +99,8 @@
     overflow-y: auto;
     order: 100;
     background-color: #343a40;
+    position: relative;
+    z-index: 1;
   }
 
   .nav-toggle {

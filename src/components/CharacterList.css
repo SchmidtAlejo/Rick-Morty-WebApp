@@ -9,7 +9,13 @@
 @media (max-width: 768px) {
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1600px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 300px);
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
   .grid-container {
     grid-template-columns: repeat(auto-fill, 300px);
   }

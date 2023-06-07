@@ -13,7 +13,7 @@ import Error from './Pages/Error'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Rick-Morty-WebApp/",
     element: <Navigation />,
     children:[
       {
@@ -22,24 +22,24 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "favorites",
+        path: "/Rick-Morty-WebApp/favorites/",
         element: <Favorites/>,
       },
       {
-        path: "character/:characterId",
+        path: "/Rick-Morty-WebApp/character/:characterId",
         element: <Character />,
         loader: LoaderCharacter
       },
       {
-        path: "episode/",
+        path: "/Rick-Morty-WebApp/episode/",
         element: <Episode />
       },
       {
-        path: "location/",
+        path: "/Rick-Morty-WebApp/location/",
         element: <Location />
       },
       {
-        path:'*',
+        path:'/Rick-Morty-WebApp/*',
         element: <Error/> 
       }
     ]

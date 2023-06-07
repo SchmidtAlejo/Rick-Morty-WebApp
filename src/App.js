@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     children:[
       {
         index: true,
-        path: "/",
+        path: "/Rick-Morty-WebApp/",
         element: <Home />
       },
       {

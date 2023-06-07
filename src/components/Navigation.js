@@ -51,7 +51,7 @@ export default function Navigation() {
                 <FaBars color="White" size={"20px"} />
               </div>
             </div>
-            <NavLink className="navbar-brand" to={"/"}>
+            <NavLink className="navbar-brand" to={"/Rick-Morty-WebApp/"}>
               <img
                 src={require("./../assets/Rick_and_Morty.svg.png")}
                 className="img"
@@ -65,7 +65,7 @@ export default function Navigation() {
             <Nav className="nav-menu-list">
               <NavLink
                 className="nav-link"
-                to="/favorites"
+                to="/Rick-Morty-WebApp/favorites/"
                 onClick={() => {
                   setOnToggle(false);
                 }}
@@ -74,7 +74,7 @@ export default function Navigation() {
               </NavLink>
               <NavLink
                 className="nav-link"
-                to="/episode/"
+                to="/Rick-Morty-WebApp/episode/"
                 onClick={() => {
                   setOnToggle(false);
                 }}
@@ -83,7 +83,7 @@ export default function Navigation() {
               </NavLink>
               <NavLink
                 className="nav-link"
-                to="/location/"
+                to="/Rick-Morty-WebApp/location/"
                 onClick={() => {
                   setOnToggle(false);
                 }}

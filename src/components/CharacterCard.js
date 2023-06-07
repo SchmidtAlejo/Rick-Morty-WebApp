@@ -6,7 +6,7 @@ import './CharacterCard.css'
 export default function CharacterCard({ character }) {
   return (
     <Card className="card-container">
-      <Link to={`/Character/${character.id}`} className="nav-link">
+      <Link to={`/Rick-Morty-WebApp/Character/${character.id}`} className="nav-link">
         <Card.Img variant="top" src={character.image} />
         <Card.Body>
           <Card.Title className="name-character">{character.name}</Card.Title>

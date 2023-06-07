@@ -24,7 +24,7 @@ export default function Autocomplete({ list, onChange, emptySearch, onToggle }) 
         <div>
           {list.map((character) => 
           (
-            <Link key={character.id} to={`/Character/${character.id}`} className="nav-link" onClick={onClick} >
+            <Link key={character.id} to={`/Rick-Morty-WebApp/Character/${character.id}`} className="nav-link" onClick={onClick} >
               <CharacterSearchCard character={character} />
             </Link>
           ))}
